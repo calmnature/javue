@@ -5,9 +5,13 @@ module.exports = {
   devServer: {
     // vue의 서버 포트
     port: 8081,
-    // path 경로를 지정하여 /example로 URL이 들어오면 localhost:8080(스프링 서버)로 보내줌
     proxy: {
-      '/example': {
+      // path 경로를 지정하여 /example로 URL이 들어오면 localhost:8080(스프링 서버)로 보내줌
+      // '/example': {
+      //   target: 'http://localhost:8080',
+      //   changeOrigin: true
+      // }
+      '/api': { // api로 요청하는 모든 URL은 서버(Spring)으로 요청
         target: 'http://localhost:8080',
         changeOrigin: true
       }

@@ -10,6 +10,9 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  mounted() {
+    console.log('hihi');
   }
 }
 </script>
