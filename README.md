@@ -25,6 +25,10 @@ npm install vue-router@4
 ```bash
 npm install axios
 ```
+##### Bootstrap Install
+```bash
+npm install bootstrap
+```
 ---
 ### ⚙️Setting Files
 ##### Vue + Java 연동
@@ -87,11 +91,14 @@ const router = createRouter({
 
 export default router
 ```
+##### App.vue
 ```javascript
 // main.js
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router/router.js'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 createApp(App).use(router).mount('#app')
 ```javascript
