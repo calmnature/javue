@@ -6,11 +6,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
-@RequestMapping("/example")
+@RequestMapping("/api")
 @RestController
-public class TestController {
-    @GetMapping("test")
-    public void test(){
-        log.info("테스트 컨트롤러");
+public class HomeController {
+    @GetMapping(value = {"/", ""})
+    public void home() {
+        log.info("HomeController Call");
     }
 }
