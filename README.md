@@ -1,5 +1,7 @@
 ### Backend(Java) + Frontend(Vue)를 합친 프로젝트
 ---
+##### Java + Vue 연동 참조 사이트 : https://choidoosic.tistory.com/167
+---
 #### 🔴 Java Dependency
 - Spring Web
 - Lombok
