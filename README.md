@@ -12,20 +12,25 @@
 
 #### 🟢 Vue Libraries
 - ESlint / Prettier
-- Vuex
+- router
 - Axios
+- vuex
 
 ##### ESlint / Prettier Install
 ```bash
 npm install --save-dev prettier@^3 eslint-plugin-prettier eslint-config-prettier
 ```
-##### Vuex Install
+##### router Install
 ```bash
 npm install vue-router@4
 ```
 ##### Axios Install
 ```bash
 npm install axios
+```
+##### Vuex Install
+```bash
+npm install vuex@4
 ```
 ##### Bootstrap Install
 ```bash
@@ -92,6 +97,32 @@ const router = createRouter({
 })
 
 export default router
+```
+##### store.js
+```javascript
+import { createStore } from 'vuex'
+// import axios from 'axios'
+
+const store = createStore({
+    // state 변수
+    state() {
+        return {
+            navState: "tmp",
+        }
+    },
+    // state 변수 값 변경 함수 정의
+    mutations: {
+        setNavState(state, data) {
+            state.navState = data;
+        },
+    },
+    // ajax 작성
+    actions: {
+
+    }
+})
+
+export default store;
 ```
 ##### App.vue
 ```javascript
