@@ -11,9 +11,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item" v-for="(data, idx) in navData" :key="idx">
-<!--              <a class="nav-link" href="#" @click="$store.commit('setNavState', data)">{{ data }}</a>-->
-              <router-link class="nav-link" :to="data.link">{{data.name}}</router-link>
+            <li class="nav-item" v-for="(info, idx) in navInfo" :key="idx">
+              <router-link class="nav-link" :to="info.link">{{info.name}}</router-link>
             </li>
           </ul>
         </div>
@@ -27,9 +26,9 @@ export default {
   name: "Nav",
   data() {
     return {
-      navData: [
+      navInfo: [
           {name: 'Home', link: '/'},
-          {name: 'Feature', link: '/feature'}
+          {name: 'Feature', link: '/feature/lotto'}
       ]
     };
   },

@@ -1,12 +1,12 @@
 <template>
   <div>
-    <h1 class="fs-1 vh-100">Feature 페이지임~!</h1>
+    <h1>진짜 로또 되게 해주세요!!!!!!!!!!</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Feature",
+  name: "Lotto",
 }
 </script>
 

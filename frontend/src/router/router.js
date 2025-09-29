@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../components/Home.vue'
-import Feature from '../components/Feature.vue'
+import Home from '@/views/Home.vue'
+import Feature from '@/views/Feature.vue'
+import Lotto from '@/views/Lotto.vue'
+import Todo from '@/views/Todo.vue'
 
 const routes = [
     {
@@ -9,7 +11,17 @@ const routes = [
     },
     {
         path: '/feature',
-        component: Feature
+        component: Feature,
+        children: [
+            {
+                path: 'lotto',
+                component: Lotto,
+            },
+            {
+                path: 'todo',
+                component: Todo,
+            }
+        ]
     },
 ]
 

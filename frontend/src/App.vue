@@ -3,19 +3,16 @@
     <Nav/>
 
     <router-view></router-view>
-<!--    <Home/>-->
   </div>
 </template>
 
 <script>
-import Nav from './components/Nav.vue'
-// import Home from './components/Home.vue'
+import Nav from '@/components/Nav.vue'
 
 export default {
   name: "App",
   components: {
     Nav,
-    // Home,
   },
   mounted() {
   },
@@ -24,7 +21,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   div {
     background: black;
     color: white;
