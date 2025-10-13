@@ -1,4 +1,4 @@
-package myprj.javavue.javue.controller;
+package myprj.javavue.javue.home.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
