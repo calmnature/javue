@@ -14,7 +14,7 @@
     <span>로또 번호는 최대 6개입니다.</span>
   </div>
   <div class="center-box mt-2">
-    <button class="btn btn-primary" @click="submitSelectNumbers">번호 확정</button>
+    <button class="btn btn-primary" @click="submitSelectNumbers(selected)">번호 확정</button>
   </div>
 </template>
 
