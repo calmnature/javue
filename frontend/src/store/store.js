@@ -21,8 +21,8 @@ const store = createStore({
                 selectLotto,
                 {headers : {'Content-Type' : 'application/json'}})
                 .then(response => {
-                    alert('ajax 성공');
-                    console.log(response);
+                    let numbers = response.data;
+                    context.state.resultNumbers = numbers.sort((n1,n2) => n1 - n2);
                 })
                 .catch(error => {
                     alert('로또 번호 요청 중 에러 발생');
