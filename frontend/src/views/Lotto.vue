@@ -13,13 +13,19 @@
   <div class="center-box mt-2" v-if="maxLotto" style="color: hotpink; font-weight: bold;">
     <span>로또 번호는 최대 6개입니다.</span>
   </div>
-  <div class="center-box mt-2">
-    <button class="btn btn-primary" @click="submitSelectNumbers(selected)">번호 확정</button>
+  <div class="center-box mt-4">
+    <button class="btn btn-success me-4" @click="submitSelectNumbers(selected)">번호 확정</button>
+    <button class="btn btn-secondary" @click="clearAll()">초기화</button>
+  </div>
+  <div class="center-box mt-3">
+    <button
+        class="btn btn-danger m-2 res-btn"
+        v-for="(number, i) in lottoNumbers" :key="i">{{number}}</button>
   </div>
 </template>
 
 <script>
-import {mapActions, mapMutations} from "vuex";
+import {mapActions, mapMutations, mapState} from "vuex"
 
 export default {
   name: "Lotto",
@@ -41,8 +47,17 @@ export default {
       }
       this.maxLotto = this.selected.length > 5;
     },
+    clearAll() {
+      this.clearResultNumbers();
+      this.selected = [];
+    },
     ...mapMutations(['clearResultNumbers']),
     ...mapActions(['submitSelectNumbers']),
+  },
+  computed: {
+    ...mapState({
+      lottoNumbers : state => state.resultNumbers,
+    }),
   }
 }
 </script>
@@ -72,5 +87,11 @@ button.active {
   margin: auto;
   width: 50%;
   text-align: center;
+}
+
+.res-btn {
+  width: 50px;
+  height : 50px;
+  border-radius: 50%;
 }
 </style>
